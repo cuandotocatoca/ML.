@@ -5,6 +5,18 @@
   <meta charset="utf-8">
   <script type="text/javascript">
     let name = prompt ("Ingresa tu nombre");
+    const trivia = (option) => {
+      switch(option) {
+        case "a.Peru":
+          document.getElementById("peru").style.display = "inline";
+          document.getElementById("vzla").style.display = "none";
+          break;
+        case "b.Venezuela":
+          document.getElementById("vzla").style.display = "inline";
+          document.getElementById("peru").style.display = "none";
+          break;
+      }
+    }
     const checkBtn = (option) => {
       switch(option) {
         case "a.Piura":
@@ -44,12 +56,55 @@
           break;
       }
     }
+    const avila = (option) => {
+      switch(option) {
+        case "a.Caracas":
+          alert ("Respuesta correcta")
+          break;
+        case "b.Tucupita":
+          alert ("Respuesta incorrecta")
+          break;
+        case "c.San Cristobal":
+          alert ("Respuesta incorrecta")
+          break;
+      }
+    }
+    const CuevaDelGuacharo = (option) => {
+      switch(option) {
+        case "a.Trujillo":
+          alert ("Respuesta incorrecta")
+          break;
+        case "b.Barinas":
+          alert ("Respuesta incorrecta")
+          break;
+        case "c.Monagas":
+          alert ("Respuesta correcta")
+          break;
+      }
+    }
+    const MonumentoMantoDeMaria = (option) => {
+      switch(option) {
+        case "a.Bolivar":
+          alert ("Respuesta incorrecta")
+          break;
+        case "b.Lara":
+          alert ("Respuesta correcta")
+          break;
+        case "c.Delta Amacuro":
+          alert ("Respuesta incorrecta")
+          break;
+      }
+    }
   </script>
   <title>Trivia</title>
 </head>
 
 <body>
+<h1>Seleccione la trivia</h1>
+<button onclick="trivia('a.Peru')">a.Peru</button>
+<button onclick="trivia('b.Venezuela')">b.Venezuela</button>
 
+<div id="peru" name="peru" style="display: none;">
 <h1> Bienvenida <script type="text/javascript">document.write(name)</script> a tu trivia cultura chupistica de sitios turisticos en  Perú  </h1>
 
   <h2> En que provincia queda la montaña siete colores? </h2>
@@ -74,6 +129,33 @@
 
   <button onclick="Send('Responder y ver resultados')">Responder y ver resultados</button>
 
+</div>
+<div id="vzla" name="vzla" style="display: none;">
+  <h1> Bienvenida <script type="text/javascript">document.write(name)</script> a tu trivia cultura chupistica de sitios turisticos en  Venezuela </h1>
+
+  <h2> En que ciudad queda el parque nacional el avila? </h2>
+
+  <button onclick="avila('a.Caracas')">a.Caracas</button>
+  <button onclick="avila('b.Tucupita')">b.Tucupita</button>
+  <button onclick="avila('c.San Cristobal')">c.San Cristobal</button>
+
+  <h2> En que estado se encuentra la Cueva del guacharo? </h2>
+
+  <button onclick="CuevaDelGuacharo('a.Trujillo')">a.Trujillo</button>
+  <button onclick="CuevaDelGuacharo('b.Barinas')">b.Barinas</button>
+  <button onclick="CuevaDelGuacharo('c.Monagas')">c.Monagas</button>
+
+  <h2> En que estado se encuentra el Monumento Manto de de Maria? </h2>
+
+  <button onclick="MonumentoMantoDeMaria('a.Bolivar')">a.Bolivar</button>
+  <button onclick="MonumentoMantoDeMaria('b.Lara')">b.Lara</button>
+  <button onclick="MonumentoMantoDeMaria('c.Delta Amacuro')">c.Delta Amacuro</button>
+
+  <h2></h2>
+
+  <button onclick="Send('Responder y ver resultados')">Responder y ver resultados</button>
+
+</div>
 
   <script type="text/javascript" src="app.js">
 

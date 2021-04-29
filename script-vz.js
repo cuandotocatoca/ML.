@@ -22,7 +22,7 @@ function question1 (type) {
   }
 }
 
-const checkBtn = (option) => {
+const avila = (option) => {
   switch(option) {
 
     case "a.Caracas":
